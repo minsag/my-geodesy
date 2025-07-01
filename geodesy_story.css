@@ -1,0 +1,35 @@
+
+         body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            overflow: hidden; 
+            text-align: justify;
+        }
+        
+        #story-panel {
+            max-height: 75vh;
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px); 
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        #story-panel::-webkit-scrollbar {
+            width: 6px;
+        }
+        #story-panel::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        #story-panel::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 3px;
+        }
+        #story-panel::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        .story-section.active {
+            background-color: #f0f9ff;
+            border-left: 4px solid #0ea5e9;
+        }
+        .story-section {
+            transition: background-color 0.3s ease-in-out, border-left 0.3s ease-in-out;
+            cursor: pointer; 
+        }

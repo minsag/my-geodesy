@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRẮC ĐỊA - BẢN ĐỒ, GIS và những mẩu chuyện nhỏ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="stylesheet" href="./geodesy_story.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body class="bg-gray-100">
+    <div id="map" class="h-screen w-screen absolute top-0 left-0 z-0" ></div>
+
+    <div class="absolute top-0 left-0 z-10 p-4 md:p-6 w-full md:w-1/3 lg:w-1/4 h-full pointer-events-none">
+        <div id="story-panel" class="rounded-xl shadow-2xl overflow-y-auto pointer-events-auto">
+            <div class="p-6 md:p-8">
+                <h1 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">TRẮC ĐỊA - BẢN ĐỒ, GIS và những mẩu chuyện
+                    nhỏ</h1>
+                <p class="text-gray-600 mb-8">Tôi là Phạm Minh Khôi lớp 09_ĐH_TĐTH và hãy cuộn trang và click vào marker để xem popup nhé!</p>
+                <!-- Chương 1 -->
+                <section id="c1" class="story-section p-6 mb-8 rounded-lg border border-gray-200" data-lat="12.079251655345711"
+                    data-lon="107.31699777786983" data-zoom="8" data-marker ="ch1">
+                    <h2 class="text-xl font-bold text-sky-700 mb-2">Lý tưởng ban đầu</h2>
+                    <p class="text-gray-700">
+                        “Trái đất này không phải hình cầu”, Đây là một trong số những kiến thức mà ngành trắc địa cung
+                        cấp cho tôi làm tôi thay đổi cách nhìn với trái đất này. Chọn ngành này từ đầu tôi đã nghĩ mình
+                        sẽ làm một lao động trong ngành địa chính. Tôi được tiếp cận với các kiến thức về đo đạc và vẽ
+                        bản đồ địa chính từ sớm ngay từ những môn cơ sở ngành và các kỳ thực tập tại Đồng Nai và Đà Lạt.
+                        Tôi nghĩ “mình sẽ chọn ngành địa chính nhỉ?”. Càng làm tôi chắc chắn hơn khi công việc tôi được
+                        giới thiệu đầu tiên từ một người quen là đi đo cùng với một anh đo đạc đạc địa chính. Nhưng một
+                        bước ngoặt quan trọng đến với tôi nhưng thật ra nó đã sớm có tính hiệu.
+                    </p>
+                </section>
+                <!-- Chương 2-->
+                <section id="c2" class="story-section p-6 mb-8 rounded-lg border border-gray-200" data-lat="10.786195155949182"
+                    data-lon=" 106.66729892668309" data-zoom="18" data-marker ="hptech">
+                    <h2 class="text-xl font-bold text-sky-700 mb-2">GIS và việc làm thêm</h2>
+                    <p class="text-gray-700">
+                        GIS ban đầu được tôi bó gọn trong các hashtag #spatialdata, #vector, #shp và một cái đặt
+                        biệt #ArcGIS đúng vậy tôi đã lầm tưởng GIS chỉ là dùng ArcGIS để xử lý và biên tập một vài bản
+                        đồ. Nhưng tôi đã nhận ra mình sai lầm như thế nào khi tìm hiểu về GIS để làm báo cáo tiểu luận
+                        cho môn học GIS đại cương. Từ đây GIS bắt đầu là một tiêu đề được tôi lưu tâm mỗi khi thấy từ
+                        khóa này trên bất cứ mặt phẳng nào, có thể là trang sách hay màn hình. Tình cờ vào mùa hè năm đó
+                        tôi được Cô Hoa giới thiệu cho tôi một công việc làm thêm. Một phần vì muốn biết thêm kiến thức
+                        mức một phần vì muốn có thêm thu nhập (Nhưng thật sự thì đồng tiền đã thao túng tôi). Tôi nhớ
+                        hôm tôi lên công ty đó để phỏng vấn hôm đó trời khá là âm u và tôi được mời một ly nước trong
+                        thời gian chờ đến lượt vì trước đó có 1 người. Thật sự lúc đó tôi đã rất lo lắng tôi không sợ
+                        rớt mà tôi sợ tôi sẽ làm mất mặt cô giới thiệu tôi. Đến lượt tôi, chúng tôi trao đổi rất nhiều
+                        và không phụ lòng cô giới thiệu tôi được nhận. Công việc bắt đầu với nhiệm vụ đơn giản là chuẩn
+                        hóa các dữ liệu địa chính, giao thông và quy hoạch theo yêu cầu lưu trữ cho một cơ sở dữ liệu
+                        nhằm phục vụ một WebGIS với bài toán định giá đất. Chính những cái tôi tiếp xúc trong quá trình
+                        làm việc làm tôi thêm tự tin để chắc chắn mình nên chủ động chọn chuyên ngành công nghệ thông
+                        tin địa lý. Lúc có danh sách tôi là hàng hiếm khi trong danh sách không nhiều người chủ động
+                        chọn chuyên ngành này. Tất nhiên là ngành nào cũng tốt cả việc lựa chọn chuyên ngành chỉ là một
+                        bước để phân công lao động xã hội (nghe hơi triết lý nhưng đó là sự thật mà).
+                        Quay lại với câu chuyện làm thêm trùng hợp lúc tôi vào làm thì chị hướng dẫn của tôi chị ấy sắp
+                        nghỉ thai sản. Tôi được đào tạo để nhận một nhiệm vụ mà tôi tự đánh giá là trọng đại là quản lý
+                        một nhóm xử lý dữ liệu nhỏ. Từ đó tôi được cấp cho một tài khoản để sử dụng WebGIS này. Tôi được
+                        thêm nhiệm vụ upload dữ liệu lên Database và sẽ cùng chịu trách nhiệm với một anh Dev trong
+                        nhiệm vụ này. Lúc đó tôi nhận ra một điều GIS còn có thêm lập trình nữa. Cùng thời gian này trên
+                        lớp tôi cũng được học về lập trình GIS do thầy Nhất và thầy Bảo dạy thật sự mà nói ban đầu tôi
+                        khá sợ 2 thầy nhưng học lâu tôi thấy cũng bình thường vì “hai thầy dạy hay mà”. Thật hay ho làm
+                        sao khi mà tôi dùng kiến thức học về lập trình GIS để tự xây cho mình một bộ tool để tăng năng
+                        suất xử lý dữ liệu của nhóm chúng tôi. Đây là một thành công nhỏ trong con đường học GIS của
+                        mình. Nhưng tiệc vui mấy thì cũng tàn dữ liệu cần xử lý cũng đã hết và tôi quay lại chuẩn bị cho
+                        hành trình mới mang tên “Thực tập tốt nghiệp”.
+                    </p>
+                </section>
+                <!-- Chương 3 -->
+                <section id="c3" class="story-section p-6 mb-8 rounded-lg border border-gray-200" data-lat="10.783736119857261"
+                    data-lon="106.70218782427096" data-zoom="18" data-marker ="stac">
+                    <h2 class="text-xl font-bold text-sky-700 mb-2">Thực tập tại Trung tâm ứng dụng công nghệ vũ trụ
+                        TP.HCM (STAC)</h2>
+                    <p class="text-gray-700">
+                        Sau khi kết thúc công việc làm thêm tôi nhận ra rằng kiến thức hiện tại chưa đủ và tôi chủ động
+                        tham gia các khóa học từ free cho đến mất phí (cũng hơi tiếc nhưng tiền dành cho học tập thì có
+                        ích mà lại không làm béo mình thì tiêu thôi). Trong một khóa học về viễn thám tôi được học thầy
+                        Nguyên và thầy đang công tác tại nơi mà tôi thấy khá là hứng thú và mong muốn được đến đó thực
+                        tập là STAC. Tôi tự đánh giá mình là một con người thiên về hành động nên tôi đã chủ động nhắn
+                        tin cho thầy ấy để xin được thực tập ở trung tâm. Thầy trả lời rất gọn rằng thầy đồng ý, thật sự
+                        tôi không nghĩ sẽ dễ dàng như vậy và tôi còn giới thiệu thêm một người bạn của tôi đến đó thực
+                        tập cùng và cũng được thầy chấp nhận. Trái ngược với hôm phỏng vấn việc làm thêm, hôm tôi đến
+                        phỏng vấn thực tập trời khá đẹp nhưng những con đường ở trung tâm thành phố làm tôi lạc đường
+                        cũng may tôi đến không quá trễ. Tôi được phân công và phòng thí nghiệm viễn thám với sự hướng
+                        dẫn trực tiếp cũng anh Phụng. Ban đầu tôi cảm nhận được một bầu không khí tri thức khi xung
+                        quanh tôi với những kệ sách đầy ắp sách chuyên ngành và toàn những thạc sĩ, tiến sĩ mà tên của
+                        họ đều khá quen trên mục tác giả của các bài nghiên cứu khoa học nhưng các anh chị rất là tốt
+                        bụng và cảm giác thiếu tự tin ban đầu nhanh chóng biến mất. Tôi thực hiện đề tài ước tính Carbon
+                        rừng từ ảnh viễn thám mà với tôi khá xa lạ. Tôi tìm khắp nơi về các kiến thức cần thiết từ Á
+                        sang Âu và từ đông sang tây. Lúc này tôi thiếu một thứ chính là dữ liệu sinh khối thực địa. Cũng
+                        là sự tình cờ khi tôi đọc một bài nghiên cứu của thầy Lợi ở Đại học Cần Thơ có về công bố một
+                        phần bộ dữ liệu đó. Tinh thần chủ động của tôi phát huy tối đa, Tôi chủ động gửi email cho thầy
+                        ấy để xin được phép sử dụng dữ liệu cho đề tài này và may mắn tôi được thầy đồng ý và thầy gửi
+                        tôi toàn bộ dữ liệu mà thầy có. Khi có đủ dữ liệu việc hoàn thành bài nghiên cứu của tôi diễn ra
+                        khá là trôi chảy và tôi nhận được đánh giá được quy thành con số 95/100. Dù có bao nhiêu điểm
+                        thì em cũng rất biết ơn đến thầy Nguyên, thầy Lợi, Cô Thy, anh Phụng và các thầy cô, anh chị ở
+                        trung tâm đã hỗ trợ em.
+                    </p>
+                </section>
+                <!-- Chương 4 -->
+                <section id="c4" class="story-section p-6 mb-8 rounded-lg border border-gray-200" data-lat="10.796600346484697"
+                    data-lon="106.66675501577072" data-zoom="18" data-marker ="cslvs">
+                    <h2 class="text-xl font-bold text-sky-700 mb-2">Đồ án tốt nghiệp</h2>
+                    <p class="text-gray-700">
+                        Đề tài tôi chọn là “Trực quan hóa ngập lụt vào mùa lũ năm 2023 tại khu vực đồng bằng sông Cửu
+                        Long từ ảnh radar Sentinel 1” một cái tên nghe rất kêu đúng không, mà đơn giải thích giản lại là
+                        tôi dùng ảnh viễn thám để xây dựng bản đồ ngập lũ, bản đồ đa thời gian và một WebGIS về ngập lụt
+                        có thể nói tôi đã vận dụng hết vốn liếng mình học để làm ra cái đề tài này. Vì tôi nghĩ nó sẽ có
+                        ích với việc dùng viễn thám và GIS để giám sát một loại hình thiên tai rất phổ biến ở ĐBSCL là
+                        Ngập lụt. Tôi đã gặp không ít khó khăn khi làm đề tài này từ việc chọn phần mềm, dùng phương
+                        pháp nào và cách đánh giá độ chính xác. May mắn cho tôi là tôi có những thầy cô và những anh chị
+                        mà tôi đã quen biết trong quá trình học tập và làm thêm của mình. Giờ nghĩ lại tôi thấy mình hơi
+                        tham khi làm nhiều mục tiêu đến vậy, nhưng mà phải dám tham lam mới đạt được nhiều thứ chứ. Đề
+                        tài này tôi được thầy Khánh và thầy Bảo hướng dẫn, 2 thầy theo tôi khá sát đặc biệt đến giờ tôi
+                        lâu lâu vẫn bất giác không biết lúc đó mình có nói lời nào sai hay sửa chỗ nào chưa ổn theo ý
+                        của thầy không. Thầy Khánh cũng cho tôi nhiều nhận xét rất thực tế về những sản phẩm của tôi
+                        làm ra và nó khá rất hữu ít khi tôi quá mơ mộng cho những ý tưởng trên mây. Về sau tôi nhận thấy
+                        dù như nào thì 2 thầy đều mong muốn bài của tôi thật tốt vì đây là bài thể hiện năng lực của bản
+                        thân tôi có xứng đáng để tốt nghiệp hay không. Nếu bạn muốn xem thì đây là
+                    </p>
+                    <p class="text-gray-700">
+                        <a href=" https://www.youtube.com/watch?v=KA1__dkEQpY" style="color: coral;">Video giới thiệu về
+                            WebGIS</a>
+                    </p>
+                    <p class="text-gray-700">
+                        <a href=" https://www.youtube.com/watch?v=Rzoz9iTNPro" style="color: coral;">Video bản đồ
+                            động</a>
+                    </p>
+                </section>
+                <!-- Chương 5 -->
+                <section id="saigon" class="story-section p-6 mb-8 rounded-lg border border-gray-200" data-lat="11.403396143370635"
+                    data-lon="107.71265033402777" data-zoom="8" data-marker ="all">
+                    <h2 class="text-xl font-bold text-sky-700 mb-2">Lời chia sẽ</h2>
+                    <p class="text-gray-700">
+                        Mới đó đã cũng rất lâu kể từ ngày tôi báo cáo đồ án tốt nghiệp và hiện tại tôi đang gap year và
+                        nhận các job freelance để dành thời gian trau dồi cho bản thân mình. Cuối cùng tôi có một số lời
+                        muốn chia sẻ. Với tư cách một người sinh viên, Em chân thành cảm ơn quý thầy cô của khoa đã góp
+                        phần tạo nên một ngành học mà em rất vinh dự là một sinh viên của ngành Trắc địa – Bản đồ. Em
+                        cũng xin được thiên vị một chút để chân thành cảm ơn quý thầy cô trực tiếp dạy em và đặc biệt là
+                        các thầy cô bộ môn Địa tin học. Còn với tư cách là một cựu sinh viên, tôi muốn chia sẻ rằng
+                        những thứ được học trên trường tuy nhiều nhưng rất bổ ích và hãy cố gắng học thêm nhiều thứ nhất
+                        có thể vì “không ai quy định một ông đầu bếp chỉ nên biết nấu một vài món ăn” khi bạn biết đủ
+                        nhiều và đa năng thì bạn sẽ là một ông đầu bếp mà nhà hàng nào cũng săn đón.
+                    </p>
+                </section>
+                <div class="text-center text-gray-500 mt-10">
+                    <p>Cảm ơn và chúc mọi người thành công với lựa chọn của mình!</p>
+                    <p>Phạm Minh Khôi</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./geodesy_story.js"></script>
+</body>
+</html>
